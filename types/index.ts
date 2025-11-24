@@ -17,6 +17,7 @@ export interface Recipe {
   difficulty: 1 | 2 | 3;
   duration: number;
   ingredients: RecipeIngredient[];
+  thumbnail: string;
 }
 
 export interface RecipeSpecs {

@@ -9,6 +9,7 @@ import RecipeSpecs from "@/components/receipe-specs";
 import type { Recipe as RecipeType, Ingredient, RecipeIngredient } from "@/types";
 import { Empty, EmptyContent, EmptyDescription, EmptyHeader, EmptyMedia, EmptyTitle } from "@/components/ui/empty";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
+import Image from "next/image";
 
 function getIngredientById(id: number): Ingredient | undefined {
     return (ingredients as Ingredient[]).find(ingredient => ingredient.id === id);
@@ -65,6 +66,13 @@ export default async function Recipe({ params }: { params: Promise<{ id: string 
                 </div>
             </div>
             <AspectRatio ratio={16 / 9} className="mb-2 rounded-lg overflow-hidden bg-stone-200">
+                <Image
+                    src={recipe.thumbnail}
+                    alt={recipe.title}
+                    width={1080}
+                    height={720}
+                    className="object-cover object-center w-full h-full"
+                />
             </AspectRatio>
         </header>
         <main>

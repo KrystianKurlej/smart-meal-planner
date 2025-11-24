@@ -13,7 +13,8 @@
             { "id": 4, "quantity": 100, "unit": "g" },
             { "id": 5, "quantity": 1, "unit": "szczypta" },
             { "id": 6, "quantity": 1, "unit": "szczypta" }
-        ]
+        ],
+        "thumbnail": "/img/recipes/carbonara.jpg"
     },
     {
         "id": 2,
@@ -32,7 +33,8 @@
             { "id": 13, "quantity": 1, "unit": "łyżeczka" },
             { "id": 5, "quantity": 1, "unit": "szczypta" },
             { "id": 6, "quantity": 1, "unit": "szczypta" }
-        ]
+        ],
+        "thumbnail": "/img/recipes/greek-salad.jpg"
     },
     {
         "id": 3,
@@ -50,6 +52,7 @@
             { "id": 18, "quantity": 3, "unit": "łyżki" },
             { "id": 5, "quantity": 1, "unit": "szczypta" },
             { "id": 6, "quantity": 1, "unit": "szczypta" }
-        ]
+        ],
+        "thumbnail": "/img/recipes/pierogi.jpg"
     }
 ]

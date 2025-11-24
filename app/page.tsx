@@ -4,6 +4,7 @@ import recipes from "@/db/recipes.json";
 import RecipeSpecs from "@/components/receipe-specs";
 import type { Recipe } from "@/types";
 import { AspectRatio } from "@radix-ui/react-aspect-ratio";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -12,6 +13,13 @@ export default function Home() {
         <Link key={recipe.id} href={`/recipes/${recipe.id}`}>
           <Card className="w-full mb-3 pt-0">
             <AspectRatio ratio={5 / 2} className="rounded-t-lg overflow-hidden bg-stone-200">
+              <Image
+                src={recipe.thumbnail}
+                alt={recipe.title}
+                width={1080}
+                height={720}
+                className="object-cover object-center w-full h-full"
+              />
             </AspectRatio>
             <CardHeader>
               <CardTitle>

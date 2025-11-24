@@ -14,10 +14,15 @@ export default function Home() {
     setInputSearchTerm(e.target.value);
   };
 
+  const handleClearInputSearchTerm = () => {
+    setInputSearchTerm("");
+    setSearchTerm("");
+  };
+
   const handleSearchSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setSearchTerm(inputSearchTerm);
-  }
+  };
 
   return (
     <>
@@ -35,7 +40,7 @@ export default function Home() {
           size="icon-lg"
           className={`absolute top-1/2 right-1 -translate-y-1/2 ${!inputSearchTerm && 'opacity-0 pointer-events-none'}`}
           variant="ghost"
-          onClick={() => setInputSearchTerm("")}
+          onClick={() => {handleClearInputSearchTerm()}}
         >
           <CircleX className="w-5 h-5 text-stone-500" />
         </Button>

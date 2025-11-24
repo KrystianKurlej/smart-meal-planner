@@ -8,12 +8,21 @@ import Image from "next/image";
 import type { RecipeListProps } from "@/types";
 
 export default function RecipeList({ searchTerm }: RecipeListProps) {
+    let filteredRecipes = (recipes as Recipe[]);
+
+    if (searchTerm) {
+        filteredRecipes = filteredRecipes.filter(recipe =>
+            recipe.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+            recipe.description.toLowerCase().includes(searchTerm.toLowerCase())
+        );
+    }
+    
     return(
         <>
         <p className="mb-1 text-sm text-stone-500">
             {searchTerm ? `Wyniki wyszukiwania dla "${searchTerm}"` : 'Wszystkie przepisy'}
         </p>
-        {(recipes as Recipe[]).map((recipe) => (
+        {(filteredRecipes as Recipe[]).map((recipe) => (
             <Link key={recipe.id} href={`/recipes/${recipe.id}`}>
                 <Card className="w-full mb-3 pt-0">
                     <AspectRatio ratio={5 / 2} className="rounded-t-lg overflow-hidden bg-stone-200">

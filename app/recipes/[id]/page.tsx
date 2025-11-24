@@ -6,7 +6,7 @@ import { Apple, CookingPot, FileSearchCorner, MoveLeft } from "lucide-react";
 import Link from "next/link";
 import recipes from "@/db/recipes.json";
 import ingredients from "@/db/ingredients.json";
-import RecipeSpecs from "@/components/receipe-specs";
+import RecipeSpecs from "@/components/recipe-specs";
 import type { Recipe as RecipeType, Ingredient, RecipeIngredient } from "@/types";
 import { Empty, EmptyContent, EmptyDescription, EmptyHeader, EmptyMedia, EmptyTitle } from "@/components/ui/empty";
 import { AspectRatio } from "@/components/ui/aspect-ratio";

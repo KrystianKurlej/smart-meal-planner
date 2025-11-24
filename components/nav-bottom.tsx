@@ -2,12 +2,14 @@
 
 import React from "react";
 import { ReceiptText, Refrigerator, User } from "lucide-react";
+import { useRouter, usePathname } from "next/navigation";
 
 export default function NavBottom() {
-    const [activeTab, setActiveTab] = React.useState<string>("recipes");
+    const router = useRouter();
+    const pathname = usePathname();
 
-    const handleTabClick = (tab: string) => {
-        setActiveTab(tab);
+    const handleTabClick = (path: string) => {
+        router.push(path);
     }
 
     return(
@@ -15,8 +17,8 @@ export default function NavBottom() {
             <ul className="grid grid-cols-3 h-18">
                 <li className="h-full">
                     <button
-                        className={`flex flex-col gap-1 items-center justify-center h-full w-full ${activeTab === 'recipes' ? 'text-lime-700' : ''}`}
-                        onClick={() => handleTabClick('recipes')}
+                        className={`flex flex-col gap-1 items-center justify-center h-full w-full ${pathname === '/' ? 'text-lime-700' : ''}`}
+                        onClick={() => handleTabClick('/')}
                     >
                         <ReceiptText size={24} />
                         <span className="text-sm block">Recipes</span>
@@ -24,8 +26,8 @@ export default function NavBottom() {
                 </li>
                 <li className="h-full">
                     <button
-                        className={`flex flex-col gap-1 items-center justify-center h-full w-full ${activeTab === 'assets' ? 'text-lime-700' : ''}`}
-                        onClick={() => handleTabClick('assets')}
+                        className={`flex flex-col gap-1 items-center justify-center h-full w-full ${pathname === '/assets' ? 'text-lime-700' : ''}`}
+                        onClick={() => handleTabClick('/assets')}
                     >
                         <Refrigerator size={24} />
                         <span className="text-sm block">Assets</span>
@@ -33,8 +35,8 @@ export default function NavBottom() {
                 </li>
                 <li className="h-full">
                     <button
-                        className={`flex flex-col gap-1 items-center justify-center h-full w-full ${activeTab === 'profile' ? 'text-lime-700' : ''}`}
-                        onClick={() => handleTabClick('profile')}
+                        className={`flex flex-col gap-1 items-center justify-center h-full w-full ${pathname === '/profile' ? 'text-lime-700' : ''}`}
+                        onClick={() => handleTabClick('/profile')}
                     >
                         <User size={24} />
                         <span className="text-sm block">Profile</span>

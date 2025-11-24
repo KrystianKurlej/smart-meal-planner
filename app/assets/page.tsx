@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { Drawer, DrawerContent, DrawerHeader, DrawerTrigger, DrawerTitle, DrawerDescription } from "@/components/ui/drawer";
 import { Input } from "@/components/ui/input";
-import { CirclePlus, CircleX, Search } from "lucide-react";
+import { CirclePlus, CircleX, Plus, Search } from "lucide-react";
 import React from "react";
 import ingredients from "@/db/ingredients.json";
 
@@ -62,10 +62,13 @@ export default function AssetsPage() {
                   <CircleX className="w-5 h-5 text-stone-500" />
                 </Button>
               </form>
-              <ul className="flex-1 overflow-y-auto pb-12">
+              <ul className="flex-1 overflow-y-auto pb-12 border-t pt-2">
                 {ingredients.map((ingredient) => (
-                  <li key={ingredient.id}>
+                  <li key={ingredient.id} className="flex items-center justify-between mb-2 pb-2 border-b">
                     {ingredient.name}
+                    <Button variant="outline" size="icon">
+                      <Plus />
+                    </Button>
                   </li>
                 ))}
               </ul>

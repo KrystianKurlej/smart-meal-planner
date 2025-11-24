@@ -3,13 +3,16 @@ import Link from "next/link";
 import recipes from "@/db/recipes.json";
 import RecipeSpecs from "@/components/receipe-specs";
 import type { Recipe } from "@/types";
+import { AspectRatio } from "@radix-ui/react-aspect-ratio";
 
 export default function Home() {
   return (
     <>
       {(recipes as Recipe[]).map((recipe) => (
         <Link key={recipe.id} href={`/recipes/${recipe.id}`}>
-          <Card className="w-full mb-3">
+          <Card className="w-full mb-3 pt-0">
+            <AspectRatio ratio={5 / 2} className="rounded-t-lg overflow-hidden bg-stone-200">
+            </AspectRatio>
             <CardHeader>
               <CardTitle>
                 {recipe.title}

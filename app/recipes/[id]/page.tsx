@@ -8,6 +8,7 @@ import ingredients from "@/db/ingredients.json";
 import RecipeSpecs from "@/components/receipe-specs";
 import type { Recipe as RecipeType, Ingredient, RecipeIngredient } from "@/types";
 import { Empty, EmptyContent, EmptyDescription, EmptyHeader, EmptyMedia, EmptyTitle } from "@/components/ui/empty";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 function getIngredientById(id: number): Ingredient | undefined {
     return (ingredients as Ingredient[]).find(ingredient => ingredient.id === id);
@@ -53,20 +54,22 @@ export default async function Recipe({ params }: { params: Promise<{ id: string 
                 </Link>
             </Button>
             <div className="px-4">
-                <h1 className="text-4xl font-bold mb-4">
+                <h1 className="text-4xl font-bold my-4">
                     {recipe.title}
                 </h1>
-                <p className="text-lg text-zinc-800">
+                <p className="text-lg text-stone-800">
                     {recipe.description}
                 </p>
-                <div className="my-5">
+                <div className="my-6">
                     <RecipeSpecs recipe={{ rating: recipe.rating, difficulty: recipe.difficulty, duration: recipe.duration }} />
                 </div>
             </div>
+            <AspectRatio ratio={16 / 9} className="mb-2 rounded-lg overflow-hidden bg-stone-200">
+            </AspectRatio>
         </header>
         <main>
             <div className="bg-white rounded-lg p-4 mb-2">
-                <div className="text-zinc-500 flex items-center justify-between">
+                <div className="text-stone-500 flex items-center justify-between">
                     <h2 className="text-md flex items-center gap-2.5 pl-0.5">
                         <Apple className="w-4 h-4" />
                         Składniki
@@ -79,7 +82,7 @@ export default async function Recipe({ params }: { params: Promise<{ id: string 
                                 <Checkbox id={`ingredient-${index}`} />
                                 <div className="flex flex-1 justify-between">
                                     <span className="block">{getIngredientById(ingredient.id)?.name}</span>
-                                    <span className="block text-zinc-500">{ingredient.quantity} {ingredient?.unit}</span>
+                                    <span className="block text-stone-500">{ingredient.quantity} {ingredient?.unit}</span>
                                 </div>
                             </Label>
                         </div>
@@ -87,7 +90,7 @@ export default async function Recipe({ params }: { params: Promise<{ id: string 
                 </div>
             </div>
             <div className="bg-white rounded-lg p-4 mb-2">
-                <div className="text-zinc-500 flex items-center justify-between">
+                <div className="text-stone-500 flex items-center justify-between">
                     <h2 className="text-sm flex items-center gap-2">
                         <CookingPot className="w-4 h-4" />
                         Sposób przygotowania

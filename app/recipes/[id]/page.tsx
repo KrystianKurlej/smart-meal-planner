@@ -1,7 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox"
 import { Label } from "@/components/ui/label"
-import { Apple, CookingPot, FileSearchCorner, MoveLeft, ReceiptEuro } from "lucide-react";
+import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
+import { Apple, CookingPot, FileSearchCorner, MoveLeft } from "lucide-react";
 import Link from "next/link";
 import recipes from "@/db/recipes.json";
 import ingredients from "@/db/ingredients.json";
@@ -76,43 +77,47 @@ export default async function Recipe({ params }: { params: Promise<{ id: string 
             </AspectRatio>
         </header>
         <main>
-            <div className="bg-white rounded-lg p-4 mb-2">
-                <div className="text-stone-500 flex items-center justify-between">
-                    <h2 className="text-md flex items-center gap-2.5 pl-0.5">
-                        <Apple className="w-4 h-4" />
-                        Składniki
-                    </h2>
-                </div>
-                <div className="flex flex-col mt-2">
-                    {recipe.ingredients.map((ingredient: RecipeIngredient, index: number) => (
-                        <div key={index} className="flex items-center gap-3">
-                            <Label htmlFor={`ingredient-${index}`} className="flex items-center gap-3 cursor-pointer w-full border-t py-2 text-md">
-                                <Checkbox id={`ingredient-${index}`} />
-                                <div className="flex flex-1 justify-between">
-                                    <span className="block">{getIngredientById(ingredient.id)?.name}</span>
-                                    <span className="block text-stone-500">{ingredient.quantity} {ingredient?.unit}</span>
-                                </div>
-                            </Label>
-                        </div>
-                    ))}
-                </div>
-            </div>
-            <div className="bg-white rounded-lg p-4 mb-2">
-                <div className="text-stone-500 flex items-center justify-between">
-                    <h2 className="text-sm flex items-center gap-2">
-                        <CookingPot className="w-4 h-4" />
-                        Sposób przygotowania
-                    </h2>
-                </div>
-                <div className="flex flex-col mt-2">
-                    {recipe.steps.map((step: string, index: number) => (
-                        <div key={index} className="py-4 border-t">
-                            <h3 className="text-sm text-stone-700">Krok {index + 1}</h3>
-                            <p>{step}</p>
-                        </div>
-                    ))}
-                </div>
-            </div>
+            <Accordion type="single" collapsible>
+                <AccordionItem value="ingredients" className="bg-white rounded-lg p-4 mb-2">
+                    <AccordionTrigger className="text-stone-500 flex items-center justify-between pt-0 pb-0">
+                        <h2 className="text-md flex items-center gap-2.5 pl-0.5">
+                            <Apple className="w-4 h-4" />
+                            Składniki
+                        </h2>
+                    </AccordionTrigger>
+                    <AccordionContent className="flex flex-col mt-2">
+                        {recipe.ingredients.map((ingredient: RecipeIngredient, index: number) => (
+                            <div key={index} className="flex items-center gap-3">
+                                <Label htmlFor={`ingredient-${index}`} className="flex items-center gap-3 cursor-pointer w-full border-t py-2 text-md">
+                                    <Checkbox id={`ingredient-${index}`} />
+                                    <div className="flex flex-1 justify-between">
+                                        <span className="block">{getIngredientById(ingredient.id)?.name}</span>
+                                        <span className="block text-stone-500">{ingredient.quantity} {ingredient?.unit}</span>
+                                    </div>
+                                </Label>
+                            </div>
+                        ))}
+                    </AccordionContent>
+                </AccordionItem>
+            </Accordion>
+            <Accordion type="single" collapsible>
+                <AccordionItem value="steps" className="bg-white rounded-lg p-4 mb-2">
+                    <AccordionTrigger className="text-stone-500 flex items-center justify-between pt-0 pb-0">
+                        <h2 className="text-md flex items-center gap-2.5 pl-0.5">
+                            <CookingPot className="w-4 h-4" />
+                            Sposób przygotowania
+                        </h2>
+                    </AccordionTrigger>
+                    <AccordionContent className="flex flex-col mt-2">
+                        {recipe.steps.map((step: string, index: number) => (
+                            <div key={index} className="py-4 border-t">
+                                <h3 className="text-sm text-stone-700">Krok {index + 1}</h3>
+                                <p>{step}</p>
+                            </div>
+                        ))}
+                    </AccordionContent>
+                </AccordionItem>
+            </Accordion>
         </main>
         </>
     )

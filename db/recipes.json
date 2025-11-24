@@ -5,7 +5,15 @@
         "description": "Klasyczne włoskie danie z makaronem, boczkiem, jajkami i parmezanem",
         "rating": 4.5,
         "difficulty": 2,
-        "duration": 30
+        "duration": 30,
+        "ingredients": [
+            { "id": 1, "quantity": 400, "unit": "g" },
+            { "id": 2, "quantity": 200, "unit": "g" },
+            { "id": 3, "quantity": 4, "unit": "szt" },
+            { "id": 4, "quantity": 100, "unit": "g" },
+            { "id": 5, "quantity": 1, "unit": "szczypta" },
+            { "id": 6, "quantity": 1, "unit": "szczypta" }
+        ]
     },
     {
         "id": 2,
@@ -13,7 +21,18 @@
         "description": "Świeża sałatka z pomidorów, ogórków, fety, oliwek i cebuli",
         "rating": 4.8,
         "difficulty": 1,
-        "duration": 15
+        "duration": 15,
+        "ingredients": [
+            { "id": 7, "quantity": 4, "unit": "szt" },
+            { "id": 8, "quantity": 2, "unit": "szt" },
+            { "id": 9, "quantity": 200, "unit": "g" },
+            { "id": 10, "quantity": 100, "unit": "g" },
+            { "id": 11, "quantity": 1, "unit": "szt" },
+            { "id": 12, "quantity": 3, "unit": "łyżki" },
+            { "id": 13, "quantity": 1, "unit": "łyżeczka" },
+            { "id": 5, "quantity": 1, "unit": "szczypta" },
+            { "id": 6, "quantity": 1, "unit": "szczypta" }
+        ]
     },
     {
         "id": 3,
@@ -21,6 +40,16 @@
         "description": "Tradycyjne polskie pierogi z nadzieniem ziemniaczano-serowym",
         "rating": 4.7,
         "difficulty": 3,
-        "duration": 90
+        "duration": 90,
+        "ingredients": [
+            { "id": 14, "quantity": 500, "unit": "g" },
+            { "id": 15, "quantity": 1000, "unit": "g" },
+            { "id": 16, "quantity": 500, "unit": "g" },
+            { "id": 11, "quantity": 2, "unit": "szt" },
+            { "id": 17, "quantity": 50, "unit": "g" },
+            { "id": 18, "quantity": 3, "unit": "łyżki" },
+            { "id": 5, "quantity": 1, "unit": "szczypta" },
+            { "id": 6, "quantity": 1, "unit": "szczypta" }
+        ]
     }
 ]

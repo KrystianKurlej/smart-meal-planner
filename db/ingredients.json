@@ -1,0 +1,20 @@
+[
+    { "id": 1, "name": "Spaghetti" },
+    { "id": 2, "name": "Boczek" },
+    { "id": 3, "name": "Jajka" },
+    { "id": 4, "name": "Parmezan" },
+    { "id": 5, "name": "Sól" },
+    { "id": 6, "name": "Pieprz" },
+    { "id": 7, "name": "Pomidory" },
+    { "id": 8, "name": "Ogórki" },
+    { "id": 9, "name": "Feta" },
+    { "id": 10, "name": "Oliwki" },
+    { "id": 11, "name": "Cebula" },
+    { "id": 12, "name": "Oliwa z oliwek" },
+    { "id": 13, "name": "Oregano" },
+    { "id": 14, "name": "Mąka" },
+    { "id": 15, "name": "Ziemniaki" },
+    { "id": 16, "name": "Ser biały" },
+    { "id": 17, "name": "Masło" },
+    { "id": 18, "name": "Cebula smażona" }
+]

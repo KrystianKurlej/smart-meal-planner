@@ -7,14 +7,16 @@ import { CircleX, Search } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export default function Home() {
+  const [inputSearchTerm, setInputSearchTerm] = React.useState<string>("");
   const [searchTerm, setSearchTerm] = React.useState<string>("");
 
   const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setSearchTerm(e.target.value);
+    setInputSearchTerm(e.target.value);
   };
 
   const handleSearchSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setSearchTerm(inputSearchTerm);
   }
 
   return (
@@ -24,21 +26,21 @@ export default function Home() {
         <Input
           placeholder="Szukaj przepisu..."
           className="w-full h-12 px-10"
-          value={searchTerm}
+          value={inputSearchTerm}
           onChange={handleSearchChange}
           type="text"
         />
         <Button
           type="button"
           size="icon-lg"
-          className={`absolute top-1/2 right-1 -translate-y-1/2 ${!searchTerm && 'opacity-0 pointer-events-none'}`}
+          className={`absolute top-1/2 right-1 -translate-y-1/2 ${!inputSearchTerm && 'opacity-0 pointer-events-none'}`}
           variant="ghost"
-          onClick={() => setSearchTerm("")}
+          onClick={() => setInputSearchTerm("")}
         >
           <CircleX className="w-5 h-5 text-stone-500" />
         </Button>
       </form>
-      <RecipeList />
+      <RecipeList searchTerm={searchTerm} />
     </>
   );
 }

@@ -26,3 +26,7 @@ export interface RecipeSpecs {
   difficulty: 1 | 2 | 3;
   duration: number;
 }
+
+export interface RecipeListProps {
+  searchTerm: string;
+}

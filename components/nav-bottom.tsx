@@ -8,7 +8,10 @@ export default function NavBottom() {
     const router = useRouter();
     const pathname = usePathname();
 
+    const [activeTab, setActiveTab] = React.useState<string>(pathname);
+
     const handleTabClick = (path: string) => {
+        setActiveTab(path);
         router.push(path);
     }
 
@@ -17,7 +20,7 @@ export default function NavBottom() {
             <ul className="grid grid-cols-3 h-18">
                 <li className="h-full">
                     <button
-                        className={`flex flex-col gap-1 items-center justify-center h-full w-full ${pathname === '/' ? 'text-lime-700' : ''}`}
+                        className={`flex flex-col gap-1 items-center justify-center h-full w-full ${activeTab === '/' ? 'text-lime-700' : ''}`}
                         onClick={() => handleTabClick('/')}
                     >
                         <ReceiptText size={24} />
@@ -26,7 +29,7 @@ export default function NavBottom() {
                 </li>
                 <li className="h-full">
                     <button
-                        className={`flex flex-col gap-1 items-center justify-center h-full w-full ${pathname === '/assets' ? 'text-lime-700' : ''}`}
+                        className={`flex flex-col gap-1 items-center justify-center h-full w-full ${activeTab === '/assets' ? 'text-lime-700' : ''}`}
                         onClick={() => handleTabClick('/assets')}
                     >
                         <Refrigerator size={24} />
@@ -35,7 +38,7 @@ export default function NavBottom() {
                 </li>
                 <li className="h-full">
                     <button
-                        className={`flex flex-col gap-1 items-center justify-center h-full w-full ${pathname === '/profile' ? 'text-lime-700' : ''}`}
+                        className={`flex flex-col gap-1 items-center justify-center h-full w-full ${activeTab === '/profile' ? 'text-lime-700' : ''}`}
                         onClick={() => handleTabClick('/profile')}
                     >
                         <User size={24} />

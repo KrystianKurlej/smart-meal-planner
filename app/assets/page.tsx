@@ -1,7 +1,7 @@
 export default function AssetsPage() {
   return (
-    <div>
-      <h1>Assets Page</h1>
-    </div>
+    <header>
+      <h1 className="text-4xl font-bold mt-8 mb-4">Your assets</h1>
+    </header>
   );
 }

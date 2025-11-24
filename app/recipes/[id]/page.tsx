@@ -1,18 +1,47 @@
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox"
 import { Label } from "@/components/ui/label"
-import { Apple, CookingPot, MoveLeft } from "lucide-react";
+import { Apple, CookingPot, FileSearchCorner, MoveLeft } from "lucide-react";
 import Link from "next/link";
 import recipes from "@/db/recipes.json";
 import ingredients from "@/db/ingredients.json";
+import RecipeSpecs from "@/components/receipe-specs";
+import type { Recipe as RecipeType, Ingredient, RecipeIngredient } from "@/types";
+import { Empty, EmptyContent, EmptyDescription, EmptyHeader, EmptyMedia, EmptyTitle } from "@/components/ui/empty";
 
-function getIngredientById(id: number) {
-    return ingredients.find(ingredient => ingredient.id === id);
+function getIngredientById(id: number): Ingredient | undefined {
+    return (ingredients as Ingredient[]).find(ingredient => ingredient.id === id);
 }
 
 export default async function Recipe({ params }: { params: Promise<{ id: string }> }) {
     const { id } = await params;
-    const recipe = recipes.find(r => r.id === parseInt(id));
+    const recipe = (recipes as RecipeType[]).find(r => r.id === parseInt(id));
+
+    if (!recipe) {
+        return (
+            <Empty className="min-h-screen flex flex-col items-center">
+                <EmptyHeader>
+                    <EmptyMedia>
+                        <FileSearchCorner />
+                    </EmptyMedia>
+                    <EmptyTitle>
+                        Przepis nie został znaleziony
+                    </EmptyTitle>
+                    <EmptyDescription>
+                        Spróbuj wrócić do listy przepisów.
+                    </EmptyDescription>
+                </EmptyHeader>
+                <EmptyContent>
+                    <Button asChild>
+                        <Link href="/">
+                            <MoveLeft />
+                            Wróć do listy przepisów
+                        </Link>
+                    </Button>
+                </EmptyContent>
+            </Empty>
+        );
+    }
 
     return (
         <>
@@ -23,12 +52,17 @@ export default async function Recipe({ params }: { params: Promise<{ id: string 
                     Wróć do listy przepisów
                 </Link>
             </Button>
-            <h1 className="text-4xl font-bold mb-4">
-                {recipe?.title}
-            </h1>
-            <p className="text-lg text-zinc-800 mb-8">
-                {recipe?.description}
-            </p>
+            <div className="px-4">
+                <h1 className="text-4xl font-bold mb-4">
+                    {recipe.title}
+                </h1>
+                <p className="text-lg text-zinc-800">
+                    {recipe.description}
+                </p>
+                <div className="my-5">
+                    <RecipeSpecs recipe={{ rating: recipe.rating, difficulty: recipe.difficulty, duration: recipe.duration }} />
+                </div>
+            </div>
         </header>
         <main>
             <div className="bg-white rounded-lg p-4 mb-2">
@@ -39,7 +73,7 @@ export default async function Recipe({ params }: { params: Promise<{ id: string 
                     </h2>
                 </div>
                 <div className="flex flex-col mt-2">
-                    {recipe?.ingredients.map((ingredient, index) => (
+                    {recipe.ingredients.map((ingredient: RecipeIngredient, index: number) => (
                         <div key={index} className="flex items-center gap-3">
                             <Label htmlFor={`ingredient-${index}`} className="flex items-center gap-3 cursor-pointer w-full border-t py-2 text-md">
                                 <Checkbox id={`ingredient-${index}`} />

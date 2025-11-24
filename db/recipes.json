@@ -6,6 +6,7 @@
         "rating": 4.5,
         "difficulty": 2,
         "duration": 30,
+        "thumbnail": "/img/recipes/carbonara.jpg",
         "ingredients": [
             { "id": 1, "quantity": 400, "unit": "g" },
             { "id": 2, "quantity": 200, "unit": "g" },
@@ -14,7 +15,16 @@
             { "id": 5, "quantity": 1, "unit": "szczypta" },
             { "id": 6, "quantity": 1, "unit": "szczypta" }
         ],
-        "thumbnail": "/img/recipes/carbonara.jpg"
+        "steps": [
+            "Ugotuj makaron al dente zgodnie z instrukcją na opakowaniu",
+            "Podsmaż pokrojony boczek na patelni do złotego koloru",
+            "Rozbij jajka do miski, dodaj parmezan, sól i pieprz, wymieszaj",
+            "Odcedź makaron, zachowując 1 szklankę wody po gotowaniu",
+            "Wyłącz ogień pod patelnią z boczkiem, dodaj makaron",
+            "Dodaj mieszankę jajeczną, szybko mieszając",
+            "W razie potrzeby dodaj wodę po makaronie dla uzyskania kremowej konsystencji",
+            "Podawaj natychmiast posypane parmezanem"
+        ]
     },
     {
         "id": 2,
@@ -23,6 +33,7 @@
         "rating": 4.8,
         "difficulty": 1,
         "duration": 15,
+        "thumbnail": "/img/recipes/greek-salad.jpg",
         "ingredients": [
             { "id": 7, "quantity": 4, "unit": "szt" },
             { "id": 8, "quantity": 2, "unit": "szt" },
@@ -34,7 +45,16 @@
             { "id": 5, "quantity": 1, "unit": "szczypta" },
             { "id": 6, "quantity": 1, "unit": "szczypta" }
         ],
-        "thumbnail": "/img/recipes/greek-salad.jpg"
+        "steps": [
+            "Umyj i pokrój pomidory w ósemki",
+            "Umyj i pokrój ogórki w grube plasterki",
+            "Pokrój fetę w kostkę",
+            "Pokrój cebulę w cienkie półplasterki",
+            "Połącz warzywa, fetę i oliwki w dużej misce",
+            "Przygotuj sos: wymieszaj oliwę z octem, solą i pieprzem",
+            "Polej sałatkę sosem i delikatnie wymieszaj",
+            "Podawaj schłodzoną"
+        ]
     },
     {
         "id": 3,
@@ -43,6 +63,7 @@
         "rating": 4.7,
         "difficulty": 3,
         "duration": 90,
+        "thumbnail": "/img/recipes/pierogi.jpg",
         "ingredients": [
             { "id": 14, "quantity": 500, "unit": "g" },
             { "id": 15, "quantity": 1000, "unit": "g" },
@@ -53,6 +74,19 @@
             { "id": 5, "quantity": 1, "unit": "szczypta" },
             { "id": 6, "quantity": 1, "unit": "szczypta" }
         ],
-        "thumbnail": "/img/recipes/pierogi.jpg"
+        "steps": [
+            "Ugotuj ziemniaki do miękkości, odcedź i ostudź",
+            "Podsmaż drobno pokrojoną cebulę na maśle do złocenia",
+            "Zetrzyj ziemniaki, dodaj twaróg, cebulę, sól i pieprz",
+            "Wymieszaj dokładnie nadzienie",
+            "Przygotuj ciasto: wymieszaj mąkę z odrobiną soli i olejem",
+            "Dodawaj stopniowo letniej wody, wyrabiając elastyczne ciasto",
+            "Rozwałkuj ciasto na cienki placek",
+            "Wycinaj kółka szklanką, na środek każdego kładź nadzienie",
+            "Zlepiaj brzegi, formując pierogi",
+            "Gotuj w osolonej wodzie do wypłynięcia (ok. 3-4 minuty)",
+            "Wyjmuj łyżką cedzakową",
+            "Podawaj ze skwarkami i cebulką lub śmietaną"
+        ]
     }
 ]

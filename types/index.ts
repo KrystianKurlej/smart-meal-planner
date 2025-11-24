@@ -16,8 +16,9 @@ export interface Recipe {
   rating: number;
   difficulty: 1 | 2 | 3;
   duration: number;
-  ingredients: RecipeIngredient[];
   thumbnail: string;
+  ingredients: RecipeIngredient[];
+  steps: string[];
 }
 
 export interface RecipeSpecs {

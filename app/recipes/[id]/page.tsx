@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox"
 import { Label } from "@/components/ui/label"
-import { Apple, CookingPot, FileSearchCorner, MoveLeft } from "lucide-react";
+import { Apple, CookingPot, FileSearchCorner, MoveLeft, ReceiptEuro } from "lucide-react";
 import Link from "next/link";
 import recipes from "@/db/recipes.json";
 import ingredients from "@/db/ingredients.json";
@@ -103,6 +103,14 @@ export default async function Recipe({ params }: { params: Promise<{ id: string 
                         <CookingPot className="w-4 h-4" />
                         Sposób przygotowania
                     </h2>
+                </div>
+                <div className="flex flex-col mt-2">
+                    {recipe.steps.map((step: string, index: number) => (
+                        <div key={index} className="py-4 border-t">
+                            <h3 className="text-sm text-stone-700">Krok {index + 1}</h3>
+                            <p>{step}</p>
+                        </div>
+                    ))}
                 </div>
             </div>
         </main>

@@ -9,22 +9,22 @@ import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 
 export default function RegisterPage() {
-    const [email, setEmail] = React.useState("");
-    const [password, setPassword] = React.useState("");
-    const [confirmPassword, setConfirmPassword] = React.useState("");
-    const [error, setError] = React.useState(false);
+    const [email, setEmail] = React.useState<string>("");
+    const [password, setPassword] = React.useState<string>("");
+    const [confirmPassword, setConfirmPassword] = React.useState<string>("");
+    const [error, setError] = React.useState<string>("");
 
     const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setEmail(e.target.value);
     }
 
     const handlePasswordChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        setError(false);
+        setError("");
         setPassword(e.target.value);
     }
 
     const handleConfirmPasswordChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        setError(false);
+        setError("");
         setConfirmPassword(e.target.value);
     }
 
@@ -32,22 +32,25 @@ export default function RegisterPage() {
         e.preventDefault();
 
         if (password !== confirmPassword) {
-            setError(true);
+            setError("Passwords do not match.");
             return;
         }
 
         try {
             const userCredential = await createUserWithEmailAndPassword(auth, email, password);
-            console.log("User registered:", userCredential.user);
-            setEmail("");
-            setPassword("");
+            if (userCredential.user) {
+                setEmail("");
+                setPassword("");
+            } else {
+                setError("Failed to register. Please try again.");
+            }
         } catch (error) {
-            console.error("Error registering user:", error);
+            setError("Error: " + (error as Error).message);
         }
     };
 
     return (
-        <div className="flex flex-col h-screen relative bg-stone-50 p-4">
+        <main className="flex flex-col h-screen relative bg-stone-50 p-4">
             <Button asChild variant="secondary" size="icon">
                 <Link href="/">
                     <ArrowLeft />
@@ -75,7 +78,7 @@ export default function RegisterPage() {
                         placeholder="Password"
                         value={password}
                         onChange={handlePasswordChange}
-                        aria-invalid={error}
+                        aria-invalid={error ? "true" : "false"}
                         required
                     />
                     <Input
@@ -84,12 +87,12 @@ export default function RegisterPage() {
                         placeholder="Confirm Password"
                         value={confirmPassword}
                         onChange={handleConfirmPasswordChange}
-                        aria-invalid={error}
+                        aria-invalid={error ? "true" : "false"}
                         required
                     />
                     {error && (
                         <p className="mx-2 text-sm text-destructive">
-                            Passwords do not match.
+                            {error}
                         </p>
                     )}
                     <small className="block text-sm text-stone-500 m-2">
@@ -105,6 +108,6 @@ export default function RegisterPage() {
                     </Link>
                 </Button>
             </form>
-        </div>
+        </main>
     )
 }

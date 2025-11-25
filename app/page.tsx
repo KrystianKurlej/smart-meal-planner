@@ -8,6 +8,7 @@ import Link from "next/link";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "@/lib/firebase";
 import { useRouter } from "next/navigation";
+import { GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
 
 export default function LoginPage() {
     const router = useRouter();
@@ -35,6 +36,19 @@ export default function LoginPage() {
                 router.push("/app");
             } else {
                 setError("Failed to log in. Please try again.");
+            }
+        } catch (error) {
+            setError("Error: " + (error as Error).message);
+        }
+    };
+
+    const handleGoogleLogin = async () => {
+        const provider = new GoogleAuthProvider();
+        const auth = getAuth();
+        try {
+            const result = await signInWithPopup(auth, provider);
+            if (result.user) {
+                router.push("/app");
             }
         } catch (error) {
             setError("Error: " + (error as Error).message);
@@ -77,7 +91,7 @@ export default function LoginPage() {
                 <span className="mx-4 text-sm text-stone-500">or</span>
                 <hr className="flex-grow border-stone-200" />
             </div>
-            <Button size="default" variant="secondary" className="w-full">
+            <Button size="default" variant="secondary" className="w-full" onClick={handleGoogleLogin}>
                 <MaterialIconThemeGoogle />
                 Log in with Google
             </Button>

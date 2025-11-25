@@ -83,7 +83,7 @@ export default function LoginPage() {
             </Button>
             <Button size="default" variant="secondary" className="w-full mt-2" asChild>
                 <Link href="/auth/register" title="Register">
-                    Register
+                    Register using email
                 </Link>
             </Button>
         </main>

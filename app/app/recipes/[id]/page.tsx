@@ -28,17 +28,17 @@ export default async function Recipe({ params }: { params: Promise<{ id: string 
                         <FileSearchCorner />
                     </EmptyMedia>
                     <EmptyTitle>
-                        Przepis nie został znaleziony
+                        Recipe not found
                     </EmptyTitle>
                     <EmptyDescription>
-                        Spróbuj wrócić do listy przepisów.
+                        Try going back to the recipe list.
                     </EmptyDescription>
                 </EmptyHeader>
                 <EmptyContent>
                     <Button asChild>
                         <Link href="/">
                             <MoveLeft />
-                            Wróć do listy przepisów
+                            Back to recipe list
                         </Link>
                     </Button>
                 </EmptyContent>
@@ -52,7 +52,7 @@ export default async function Recipe({ params }: { params: Promise<{ id: string 
             <Button variant="link" className="mb-4" asChild>
                 <Link href="/app/">
                     <MoveLeft />
-                    Wróć do listy przepisów
+                    Back to recipe list
                 </Link>
             </Button>
             <div className="px-4">
@@ -82,7 +82,7 @@ export default async function Recipe({ params }: { params: Promise<{ id: string 
                     <AccordionTrigger className="text-stone-500 flex items-center justify-between pt-0 pb-0">
                         <h2 className="text-md flex items-center gap-2.5 pl-0.5">
                             <Apple className="w-4 h-4" />
-                            Składniki
+                            Ingredients
                         </h2>
                     </AccordionTrigger>
                     <AccordionContent className="flex flex-col mt-2">
@@ -105,13 +105,13 @@ export default async function Recipe({ params }: { params: Promise<{ id: string 
                     <AccordionTrigger className="text-stone-500 flex items-center justify-between pt-0 pb-0">
                         <h2 className="text-md flex items-center gap-2.5 pl-0.5">
                             <CookingPot className="w-4 h-4" />
-                            Sposób przygotowania
+                            Preparation method
                         </h2>
                     </AccordionTrigger>
                     <AccordionContent className="flex flex-col mt-2">
                         {recipe.steps.map((step: string, index: number) => (
                             <div key={index} className="py-4 border-t">
-                                <h3 className="text-sm text-stone-700">Krok {index + 1}</h3>
+                                <h3 className="text-sm text-stone-700">Step {index + 1}</h3>
                                 <p>{step}</p>
                             </div>
                         ))}

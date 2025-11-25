@@ -20,7 +20,7 @@ export default function RecipeList({ searchTerm }: RecipeListProps) {
     return(
         <>
         <p className="mb-1 text-sm text-stone-500">
-            {searchTerm ? `Wyniki wyszukiwania dla "${searchTerm}"` : 'Wszystkie przepisy'}
+            {searchTerm ? `Search results for "${searchTerm}"` : 'All recipes'}
         </p>
         {(filteredRecipes as Recipe[]).map((recipe) => (
             <Link key={recipe.id} href={`/app/recipes/${recipe.id}`}>

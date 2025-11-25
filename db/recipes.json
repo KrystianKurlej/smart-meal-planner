@@ -2,7 +2,7 @@
     {
         "id": 1,
         "title": "Spaghetti Carbonara",
-        "description": "Klasyczne włoskie danie z makaronem, boczkiem, jajkami i parmezanem",
+        "description": "Classic Italian dish with pasta, bacon, eggs and parmesan",
         "rating": 4.5,
         "difficulty": 2,
         "duration": 30,
@@ -10,56 +10,56 @@
         "ingredients": [
             { "id": 1, "quantity": 400, "unit": "g" },
             { "id": 2, "quantity": 200, "unit": "g" },
-            { "id": 3, "quantity": 4, "unit": "szt" },
+            { "id": 3, "quantity": 4, "unit": "pcs" },
             { "id": 4, "quantity": 100, "unit": "g" },
-            { "id": 5, "quantity": 1, "unit": "szczypta" },
-            { "id": 6, "quantity": 1, "unit": "szczypta" }
+            { "id": 5, "quantity": 1, "unit": "pinch" },
+            { "id": 6, "quantity": 1, "unit": "pinch" }
         ],
         "steps": [
-            "Ugotuj makaron al dente zgodnie z instrukcją na opakowaniu",
-            "Podsmaż pokrojony boczek na patelni do złotego koloru",
-            "Rozbij jajka do miski, dodaj parmezan, sól i pieprz, wymieszaj",
-            "Odcedź makaron, zachowując 1 szklankę wody po gotowaniu",
-            "Wyłącz ogień pod patelnią z boczkiem, dodaj makaron",
-            "Dodaj mieszankę jajeczną, szybko mieszając",
-            "W razie potrzeby dodaj wodę po makaronie dla uzyskania kremowej konsystencji",
-            "Podawaj natychmiast posypane parmezanem"
+            "Cook pasta al dente according to package instructions",
+            "Fry sliced bacon in a pan until golden",
+            "Crack eggs into a bowl, add parmesan, salt and pepper, mix",
+            "Drain pasta, reserving 1 cup of cooking water",
+            "Turn off heat under the pan with bacon, add pasta",
+            "Add egg mixture, stirring quickly",
+            "If needed, add pasta water to achieve creamy consistency",
+            "Serve immediately sprinkled with parmesan"
         ]
     },
     {
         "id": 2,
-        "title": "Sałatka grecka",
-        "description": "Świeża sałatka z pomidorów, ogórków, fety, oliwek i cebuli",
+        "title": "Greek Salad",
+        "description": "Fresh salad with tomatoes, cucumbers, feta, olives and onions",
         "rating": 4.8,
         "difficulty": 1,
         "duration": 15,
         "thumbnail": "/img/recipes/greek-salad.jpg",
         "ingredients": [
-            { "id": 7, "quantity": 4, "unit": "szt" },
-            { "id": 8, "quantity": 2, "unit": "szt" },
+            { "id": 7, "quantity": 4, "unit": "pcs" },
+            { "id": 8, "quantity": 2, "unit": "pcs" },
             { "id": 9, "quantity": 200, "unit": "g" },
             { "id": 10, "quantity": 100, "unit": "g" },
-            { "id": 11, "quantity": 1, "unit": "szt" },
-            { "id": 12, "quantity": 3, "unit": "łyżki" },
-            { "id": 13, "quantity": 1, "unit": "łyżeczka" },
-            { "id": 5, "quantity": 1, "unit": "szczypta" },
-            { "id": 6, "quantity": 1, "unit": "szczypta" }
+            { "id": 11, "quantity": 1, "unit": "pcs" },
+            { "id": 12, "quantity": 3, "unit": "tbsp" },
+            { "id": 13, "quantity": 1, "unit": "tsp" },
+            { "id": 5, "quantity": 1, "unit": "pinch" },
+            { "id": 6, "quantity": 1, "unit": "pinch" }
         ],
         "steps": [
-            "Umyj i pokrój pomidory w ósemki",
-            "Umyj i pokrój ogórki w grube plasterki",
-            "Pokrój fetę w kostkę",
-            "Pokrój cebulę w cienkie półplasterki",
-            "Połącz warzywa, fetę i oliwki w dużej misce",
-            "Przygotuj sos: wymieszaj oliwę z octem, solą i pieprzem",
-            "Polej sałatkę sosem i delikatnie wymieszaj",
-            "Podawaj schłodzoną"
+            "Wash and cut tomatoes into eighths",
+            "Wash and cut cucumbers into thick slices",
+            "Cut feta into cubes",
+            "Cut onion into thin half-slices",
+            "Combine vegetables, feta and olives in a large bowl",
+            "Prepare dressing: mix olive oil with vinegar, salt and pepper",
+            "Pour dressing over salad and gently mix",
+            "Serve chilled"
         ]
     },
     {
         "id": 3,
-        "title": "Pierogi ruskie",
-        "description": "Tradycyjne polskie pierogi z nadzieniem ziemniaczano-serowym",
+        "title": "Pierogi",
+        "description": "Traditional Polish dumplings with potato and cheese filling",
         "rating": 4.7,
         "difficulty": 3,
         "duration": 90,
@@ -68,25 +68,25 @@
             { "id": 14, "quantity": 500, "unit": "g" },
             { "id": 15, "quantity": 1000, "unit": "g" },
             { "id": 16, "quantity": 500, "unit": "g" },
-            { "id": 11, "quantity": 2, "unit": "szt" },
+            { "id": 11, "quantity": 2, "unit": "pcs" },
             { "id": 17, "quantity": 50, "unit": "g" },
-            { "id": 18, "quantity": 3, "unit": "łyżki" },
-            { "id": 5, "quantity": 1, "unit": "szczypta" },
-            { "id": 6, "quantity": 1, "unit": "szczypta" }
+            { "id": 18, "quantity": 3, "unit": "tbsp" },
+            { "id": 5, "quantity": 1, "unit": "pinch" },
+            { "id": 6, "quantity": 1, "unit": "pinch" }
         ],
         "steps": [
-            "Ugotuj ziemniaki do miękkości, odcedź i ostudź",
-            "Podsmaż drobno pokrojoną cebulę na maśle do złocenia",
-            "Zetrzyj ziemniaki, dodaj twaróg, cebulę, sól i pieprz",
-            "Wymieszaj dokładnie nadzienie",
-            "Przygotuj ciasto: wymieszaj mąkę z odrobiną soli i olejem",
-            "Dodawaj stopniowo letniej wody, wyrabiając elastyczne ciasto",
-            "Rozwałkuj ciasto na cienki placek",
-            "Wycinaj kółka szklanką, na środek każdego kładź nadzienie",
-            "Zlepiaj brzegi, formując pierogi",
-            "Gotuj w osolonej wodzie do wypłynięcia (ok. 3-4 minuty)",
-            "Wyjmuj łyżką cedzakową",
-            "Podawaj ze skwarkami i cebulką lub śmietaną"
+            "Boil potatoes until soft, drain and cool",
+            "Sauté finely chopped onion in butter until golden",
+            "Mash potatoes, add cottage cheese, onion, salt and pepper",
+            "Mix filling thoroughly",
+            "Prepare dough: mix flour with a pinch of salt and oil",
+            "Gradually add lukewarm water, kneading elastic dough",
+            "Roll out dough into a thin sheet",
+            "Cut circles with a glass, place filling in the center of each",
+            "Seal edges, forming pierogi",
+            "Cook in salted water until they float (about 3-4 minutes)",
+            "Remove with a slotted spoon",
+            "Serve with bacon bits and onions or sour cream"
         ]
     }
 ]

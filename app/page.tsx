@@ -69,21 +69,21 @@ export default function LoginPage() {
                     </p>
                 )}
                 <Button type="submit" className="w-full mt-4">
-                    Zaloguj się
+                    Log In
                 </Button>
             </form>
             <div className="flex items-center my-4 px-4">
                 <hr className="flex-grow border-stone-200" />
-                <span className="mx-4 text-sm text-stone-500">lub</span>
+                <span className="mx-4 text-sm text-stone-500">or</span>
                 <hr className="flex-grow border-stone-200" />
             </div>
             <Button size="default" variant="secondary" className="w-full">
                 <MaterialIconThemeGoogle />
-                Zaloguj się przez Google
+                Log in with Google
             </Button>
             <Button size="default" variant="secondary" className="w-full mt-2" asChild>
-                <Link href="/auth/register" title="Zarejestruj się">
-                    Zarejestruj się
+                <Link href="/auth/register" title="Register">
+                    Register
                 </Link>
             </Button>
         </main>

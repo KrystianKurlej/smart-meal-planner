@@ -8,13 +8,13 @@ function formatRating(rating: number): string {
 function formatDifficulty(level: number): string {
   switch (level) {
     case 1:
-      return "Łatwe";
+      return "Easy";
     case 2:
-      return "Średnie";
+      return "Medium";
     case 3:
-      return "Trudne";
+      return "Hard";
     default:
-      return "Nieznane";
+      return "Unknown";
   }
 }
 

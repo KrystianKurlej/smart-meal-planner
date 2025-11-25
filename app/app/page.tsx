@@ -29,7 +29,7 @@ export default function Home() {
       <form onSubmit={handleSearchSubmit} className="relative mb-4 flex-1">
         <Search className="absolute top-1/2 left-3 -translate-y-1/2 w-5 h-5 text-stone-500" />
         <Input
-          placeholder="Szukaj przepisu..."
+          placeholder="Search recipe..."
           className="w-full h-12 px-10"
           value={inputSearchTerm}
           onChange={handleSearchChange}

@@ -14,8 +14,15 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Smart Meal Planner",
-  description: "Plan your meals smartly",
+  title: "PantryWise",
+  description: "A meal planning application to help you organize your recipes and ingredients.",
+  manifest: "/manifest.webmanifest",
+  themeColor: "#7ccf00",
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "default",
+    title: "PantryWise",
+  },
 };
 
 export default function RootLayout({

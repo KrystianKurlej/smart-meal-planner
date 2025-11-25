@@ -7,8 +7,10 @@ import { Input } from "@/components/ui/input";
 import Link from "next/link";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "@/lib/firebase";
+import { useRouter } from "next/navigation";
 
 export default function LoginPage() {
+    const router = useRouter();
     const [email, setEmail] = React.useState<string>("");
     const [password, setPassword] = React.useState<string>("");
     const [error, setError] = React.useState<string>("");
@@ -30,6 +32,7 @@ export default function LoginPage() {
             if (userCredential.user) {
                 setEmail("");
                 setPassword("");
+                router.push("/app");
             } else {
                 setError("Failed to log in. Please try again.");
             }

@@ -1,10 +1,11 @@
-import { DeviconGoogle } from "@/components/icons/google";
+import { FlowbiteGoogleSolid } from "@/components/icons/google";
 import { Button } from "@/components/ui/button";
+import { Mail } from "lucide-react";
 import Image from "next/image";
 
 export default function LoginPage() {
     return (
-        <div className="flex flex-col h-screen relative">
+        <div className="flex flex-col h-screen relative bg-stone-800">
             <Image
                 src="/img/auth-background.png"
                 alt="Logowanie"
@@ -19,8 +20,12 @@ export default function LoginPage() {
             </header>
             <main className="px-4 py-8">
                 <Button size="lg" className="w-full">
-                    <DeviconGoogle />
+                    <FlowbiteGoogleSolid />
                     Zaloguj się przez Google
+                </Button>
+                <Button size="lg" className="w-full mt-2" variant="secondary">
+                    <Mail />
+                    Zaloguj się przez e-mail
                 </Button>
             </main>
         </div>

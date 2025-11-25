@@ -21,7 +21,7 @@ export default function NavBottom() {
                 <li className="h-full">
                     <button
                         className={`flex flex-col gap-1 items-center justify-center h-full w-full ${activeTab === '/app' ? 'text-lime-700' : ''}`}
-                        onClick={() => handleTabClick('/app/')}
+                        onClick={() => handleTabClick('/app')}
                     >
                         <ReceiptText size={24} />
                         <span className="text-sm block">Recipes</span>

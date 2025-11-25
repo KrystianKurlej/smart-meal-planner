@@ -50,7 +50,7 @@ export default async function Recipe({ params }: { params: Promise<{ id: string 
         <>
         <header>
             <Button variant="link" className="mb-4" asChild>
-                <Link href="/">
+                <Link href="/app/">
                     <MoveLeft />
                     Wróć do listy przepisów
                 </Link>

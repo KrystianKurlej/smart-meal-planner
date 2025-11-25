@@ -23,7 +23,7 @@ export default function RecipeList({ searchTerm }: RecipeListProps) {
             {searchTerm ? `Wyniki wyszukiwania dla "${searchTerm}"` : 'Wszystkie przepisy'}
         </p>
         {(filteredRecipes as Recipe[]).map((recipe) => (
-            <Link key={recipe.id} href={`/recipes/${recipe.id}`}>
+            <Link key={recipe.id} href={`/app/recipes/${recipe.id}`}>
                 <Card className="w-full mb-3 pt-0">
                     <AspectRatio ratio={5 / 2} className="rounded-t-lg overflow-hidden bg-stone-200">
                         <Image

@@ -17,10 +17,10 @@ export default function NavBottom() {
 
     return(
         <nav className="fixed bottom-0 left-0 w-full bg-white border-t text-center z-10 shadow-xl">
-            <ul className="grid grid-cols-3 h-18">
+            <ul className="grid grid-cols-3 h-24">
                 <li className="h-full">
                     <button
-                        className={`flex flex-col gap-1 items-center justify-center h-full w-full ${activeTab === '/app' ? 'text-lime-700' : ''}`}
+                        className={`flex flex-col gap-1 items-center justify-center h-full w-full pb-4 ${activeTab === '/app' ? 'text-lime-700' : ''}`}
                         onClick={() => handleTabClick('/app')}
                     >
                         <ReceiptText size={24} />
@@ -29,7 +29,7 @@ export default function NavBottom() {
                 </li>
                 <li className="h-full">
                     <button
-                        className={`flex flex-col gap-1 items-center justify-center h-full w-full ${activeTab === '/app/assets' ? 'text-lime-700' : ''}`}
+                        className={`flex flex-col gap-1 items-center justify-center h-full w-full pb-4 ${activeTab === '/app/assets' ? 'text-lime-700' : ''}`}
                         onClick={() => handleTabClick('/app/assets')}
                     >
                         <Refrigerator size={24} />
@@ -38,7 +38,7 @@ export default function NavBottom() {
                 </li>
                 <li className="h-full">
                     <button
-                        className={`flex flex-col gap-1 items-center justify-center h-full w-full ${activeTab === '/app/profile' ? 'text-lime-700' : ''}`}
+                        className={`flex flex-col gap-1 items-center justify-center h-full w-full pb-4 ${activeTab === '/app/profile' ? 'text-lime-700' : ''}`}
                         onClick={() => handleTabClick('/app/profile')}
                     >
                         <User size={24} />

@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/input";
 import { CirclePlus, CircleX, Plus, Search } from "lucide-react";
 import React from "react";
 import ingredients from "@/db/ingredients.json";
+import Link from "next/link";
 
 export default function AssetsPage() {
   const [inputSearchTerm, setInputSearchTerm] = React.useState<string>("");
@@ -71,6 +72,14 @@ export default function AssetsPage() {
                     </Button>
                   </li>
                 ))}
+                <li className="py-4 text-center">
+                  <p className="text-stone-600">Not seeing an asset you need?</p>
+                  <Button variant="secondary" className="mt-2" size="sm" asChild>
+                    <Link href="/app/assets/request">
+                      Request new asset
+                    </Link>
+                  </Button>
+                </li>
               </ul>
             </div>
           </div>

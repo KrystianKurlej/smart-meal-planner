@@ -20,8 +20,8 @@ export default function NavBottom() {
             <ul className="grid grid-cols-3 h-18">
                 <li className="h-full">
                     <button
-                        className={`flex flex-col gap-1 items-center justify-center h-full w-full ${activeTab === '/' ? 'text-lime-700' : ''}`}
-                        onClick={() => handleTabClick('/')}
+                        className={`flex flex-col gap-1 items-center justify-center h-full w-full ${activeTab === '/app' ? 'text-lime-700' : ''}`}
+                        onClick={() => handleTabClick('/app/')}
                     >
                         <ReceiptText size={24} />
                         <span className="text-sm block">Recipes</span>
@@ -29,8 +29,8 @@ export default function NavBottom() {
                 </li>
                 <li className="h-full">
                     <button
-                        className={`flex flex-col gap-1 items-center justify-center h-full w-full ${activeTab === '/assets' ? 'text-lime-700' : ''}`}
-                        onClick={() => handleTabClick('/assets')}
+                        className={`flex flex-col gap-1 items-center justify-center h-full w-full ${activeTab === '/app/assets' ? 'text-lime-700' : ''}`}
+                        onClick={() => handleTabClick('/app/assets')}
                     >
                         <Refrigerator size={24} />
                         <span className="text-sm block">Assets</span>
@@ -38,8 +38,8 @@ export default function NavBottom() {
                 </li>
                 <li className="h-full">
                     <button
-                        className={`flex flex-col gap-1 items-center justify-center h-full w-full ${activeTab === '/profile' ? 'text-lime-700' : ''}`}
-                        onClick={() => handleTabClick('/profile')}
+                        className={`flex flex-col gap-1 items-center justify-center h-full w-full ${activeTab === '/app/profile' ? 'text-lime-700' : ''}`}
+                        onClick={() => handleTabClick('/app/profile')}
                     >
                         <User size={24} />
                         <span className="text-sm block">Profile</span>

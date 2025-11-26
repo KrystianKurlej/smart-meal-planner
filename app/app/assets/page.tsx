@@ -5,10 +5,11 @@ import { Drawer, DrawerContent, DrawerHeader, DrawerTrigger, DrawerTitle, Drawer
 import { Input } from "@/components/ui/input";
 import { CirclePlus, CircleX, Plus, Search } from "lucide-react";
 import React from "react";
-import ingredients from "@/db/ingredients.json";
 import Link from "next/link";
+import getIngredients from "@/db/ingredients";
 
 export default function AssetsPage() {
+  const [ingredients, setIngredients] = React.useState<{id: string; name: string}[]>([]);
   const [inputSearchTerm, setInputSearchTerm] = React.useState<string>("");
   const [searchTerm, setSearchTerm] = React.useState<string>("");
 
@@ -25,6 +26,14 @@ export default function AssetsPage() {
     e.preventDefault();
     setSearchTerm(inputSearchTerm);
   };
+
+  React.useEffect(() => {
+    async function fetchIngredients() {
+      const data = await getIngredients();
+      setIngredients(data);
+    }
+    fetchIngredients();
+  }, []);
 
   return (
     <>

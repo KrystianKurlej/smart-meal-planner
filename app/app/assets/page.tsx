@@ -6,7 +6,7 @@ import { Input } from "@/components/ui/input";
 import { CirclePlus, CircleX, Plus, Search } from "lucide-react";
 import React from "react";
 import Link from "next/link";
-import getIngredients from "@/db/ingredients";
+import { getIngredients } from "@/db/ingredients";
 
 export default function AssetsPage() {
   const [ingredients, setIngredients] = React.useState<{id: string; name: string}[]>([]);
@@ -35,6 +35,13 @@ export default function AssetsPage() {
     fetchIngredients();
   }, []);
 
+  const filteredIngredients = React.useMemo(() => {
+    if (!searchTerm.trim()) return ingredients;
+    return ingredients.filter(ingredient =>
+      ingredient.name.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+  }, [ingredients, searchTerm]);
+
   return (
     <>
     <header>
@@ -53,7 +60,7 @@ export default function AssetsPage() {
               <DrawerDescription>Add a new asset to your collection.</DrawerDescription>
             </DrawerHeader>
             <div className="px-4 flex flex-col flex-1 overflow-hidden">
-              <form onSubmit={handleSearchSubmit} className="relative mb-4">
+              <form onSubmit={handleSearchSubmit} className="relative mb-4 pt-1">
                 <Search className="absolute top-1/2 left-3 -translate-y-1/2 w-5 h-5 text-stone-500" />
                 <Input
                   placeholder="Search asset..."
@@ -73,7 +80,7 @@ export default function AssetsPage() {
                 </Button>
               </form>
               <ul className="flex-1 overflow-y-auto pb-12 border-t pt-2">
-                {ingredients.map((ingredient) => (
+                {filteredIngredients.map((ingredient) => (
                   <li key={ingredient.id} className="flex items-center justify-between mb-2 pb-2 border-b">
                     {ingredient.name}
                     <Button variant="outline" size="icon">

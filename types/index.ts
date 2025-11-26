@@ -4,7 +4,7 @@ export interface Ingredient {
 }
 
 export interface RecipeIngredient {
-  id: number;
+  id: string;
   quantity: number;
   unit: string;
 }

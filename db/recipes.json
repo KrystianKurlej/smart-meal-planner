@@ -8,12 +8,12 @@
         "duration": 30,
         "thumbnail": "/img/recipes/carbonara.jpg",
         "ingredients": [
-            { "id": 1, "quantity": 400, "unit": "g" },
-            { "id": 2, "quantity": 200, "unit": "g" },
-            { "id": 3, "quantity": 4, "unit": "pcs" },
-            { "id": 4, "quantity": 100, "unit": "g" },
-            { "id": 5, "quantity": 1, "unit": "pinch" },
-            { "id": 6, "quantity": 1, "unit": "pinch" }
+            { "id": "ArJe3XZfnSewXhRf9jlu", "quantity": 400, "unit": "g" },
+            { "id": "OGpiUXcgBkdxxQ1TOZbY", "quantity": 200, "unit": "g" },
+            { "id": "PkvGEnYPqmk6dw5Uu9pv", "quantity": 4, "unit": "pcs" },
+            { "id": "JGIpqQsy6j6lcnyBwUJa", "quantity": 100, "unit": "g" },
+            { "id": "Qg0H1ZUpDQdwUFFSzbr5", "quantity": 1, "unit": "pinch" },
+            { "id": "RHZBSw09dnU7GnQi9ikP", "quantity": 1, "unit": "pinch" }
         ],
         "steps": [
             "Cook pasta al dente according to package instructions",
@@ -35,15 +35,15 @@
         "duration": 15,
         "thumbnail": "/img/recipes/greek-salad.jpg",
         "ingredients": [
-            { "id": 7, "quantity": 4, "unit": "pcs" },
-            { "id": 8, "quantity": 2, "unit": "pcs" },
-            { "id": 9, "quantity": 200, "unit": "g" },
-            { "id": 10, "quantity": 100, "unit": "g" },
-            { "id": 11, "quantity": 1, "unit": "pcs" },
-            { "id": 12, "quantity": 3, "unit": "tbsp" },
-            { "id": 13, "quantity": 1, "unit": "tsp" },
-            { "id": 5, "quantity": 1, "unit": "pinch" },
-            { "id": 6, "quantity": 1, "unit": "pinch" }
+            { "id": "NDqrWzZGMc90VOovq9l5", "quantity": 4, "unit": "pcs" },
+            { "id": "2EAC3Dl2ZmwBYQ6QKnqS", "quantity": 2, "unit": "pcs" },
+            { "id": "JGIpqQsy6j6lcnyBwUJa", "quantity": 200, "unit": "g" },
+            { "id": "SS8yP0VNZ2uvTd9SNt9E", "quantity": 100, "unit": "g" },
+            { "id": "TGtAfdvLSmxHnYS0oDwI", "quantity": 1, "unit": "pcs" },
+            { "id": "QHJpE0Ssb9J8Y9PIsqKd", "quantity": 3, "unit": "tbsp" },
+            { "id": "PeowVKfxaQ7e7A6lqMYF", "quantity": 1, "unit": "tsp" },
+            { "id": "Qg0H1ZUpDQdwUFFSzbr5", "quantity": 1, "unit": "pinch" },
+            { "id": "RHZBSw09dnU7GnQi9ikP", "quantity": 1, "unit": "pinch" }
         ],
         "steps": [
             "Wash and cut tomatoes into eighths",
@@ -65,14 +65,14 @@
         "duration": 90,
         "thumbnail": "/img/recipes/pierogi.jpg",
         "ingredients": [
-            { "id": 14, "quantity": 500, "unit": "g" },
-            { "id": 15, "quantity": 1000, "unit": "g" },
-            { "id": 16, "quantity": 500, "unit": "g" },
-            { "id": 11, "quantity": 2, "unit": "pcs" },
-            { "id": 17, "quantity": 50, "unit": "g" },
-            { "id": 18, "quantity": 3, "unit": "tbsp" },
-            { "id": 5, "quantity": 1, "unit": "pinch" },
-            { "id": 6, "quantity": 1, "unit": "pinch" }
+            { "id": "9SgrTY8owjI0YQt7BQuO", "quantity": 500, "unit": "g" },
+            { "id": "JGIpqQsy6j6lcnyBwUJa", "quantity": 1000, "unit": "g" },
+            { "id": "A6ACbW0koi1zIFzxEKb3", "quantity": 500, "unit": "g" },
+            { "id": "TGtAfdvLSmxHnYS0oDwI", "quantity": 2, "unit": "pcs" },
+            { "id": "3WEdwyq4mmaVnlV6257S", "quantity": 50, "unit": "g" },
+            { "id": "QHJpE0Ssb9J8Y9PIsqKd", "quantity": 3, "unit": "tbsp" },
+            { "id": "Qg0H1ZUpDQdwUFFSzbr5", "quantity": 1, "unit": "pinch" },
+            { "id": "RHZBSw09dnU7GnQi9ikP", "quantity": 1, "unit": "pinch" }
         ],
         "steps": [
             "Boil potatoes until soft, drain and cool",

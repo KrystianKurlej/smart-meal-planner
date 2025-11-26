@@ -9,6 +9,7 @@ import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "@/lib/firebase";
 import { useRouter } from "next/navigation";
 import { GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
+import Logo from "@/components/logo";
 
 export default function LoginPage() {
     const router = useRouter();
@@ -57,6 +58,7 @@ export default function LoginPage() {
 
     return (
         <main className="flex flex-col justify-center h-screen relative bg-stone-50 p-4 pb-32">
+            <Logo className="mx-auto mb-8 d-block rounded-2xl w-24 h-24" />
             <h1 className="text-4xl mb-8 text-center">
                 Log in or sign up
             </h1>

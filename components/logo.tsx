@@ -10,25 +10,25 @@ export default function Logo(props: SVGProps<SVGSVGElement>) {
             <path d="M256 292.645C314.361 292.645 361.673 245.334 361.673 186.973C361.673 128.611 314.361 81.2998 256 81.2998C197.639 81.2998 150.327 128.611 150.327 186.973C150.327 245.334 197.639 292.645 256 292.645Z" fill="url(#paint4_linear_2_9)"/>
             <defs>
             <linearGradient id="paint0_linear_2_9" x1="512" y1="6.10351e-05" x2="6.10351e-05" y2="512" gradientUnits="userSpaceOnUse">
-            <stop stop-color="#C7F26C"/>
-            <stop offset="0.45" stop-color="#6FA417"/>
-            <stop offset="1" stop-color="#567D18"/>
+            <stop stopColor="#C7F26C"/>
+            <stop offset="0.45" stopColor="#6FA417"/>
+            <stop offset="1" stopColor="#567D18"/>
             </linearGradient>
             <linearGradient id="paint1_linear_2_9" x1="256" y1="430.7" x2="256" y2="324.309" gradientUnits="userSpaceOnUse">
-            <stop stop-color="#DFF9A4"/>
-            <stop offset="1" stop-color="#EFFCCF"/>
+            <stop stopColor="#DFF9A4"/>
+            <stop offset="1" stopColor="#EFFCCF"/>
             </linearGradient>
             <linearGradient id="paint2_linear_2_9" x1="99.4599" y1="332.149" x2="248.91" y2="182.699" gradientUnits="userSpaceOnUse">
-            <stop stop-color="#DFF9A4"/>
-            <stop offset="1" stop-color="#F9FEE9"/>
+            <stop stopColor="#DFF9A4"/>
+            <stop offset="1" stopColor="#F9FEE9"/>
             </linearGradient>
             <linearGradient id="paint3_linear_2_9" x1="263.095" y1="332.149" x2="412.54" y2="182.699" gradientUnits="userSpaceOnUse">
-            <stop stop-color="#DFF9A4"/>
-            <stop offset="1" stop-color="#F9FEE9"/>
+            <stop stopColor="#DFF9A4"/>
+            <stop offset="1" stopColor="#F9FEE9"/>
             </linearGradient>
             <linearGradient id="paint4_linear_2_9" x1="181.278" y1="261.7" x2="330.722" y2="112.25" gradientUnits="userSpaceOnUse">
-            <stop stop-color="#DFF9A4"/>
-            <stop offset="1" stop-color="#F9FEE9"/>
+            <stop stopColor="#DFF9A4"/>
+            <stop offset="1" stopColor="#F9FEE9"/>
             </linearGradient>
             </defs>
         </svg>
